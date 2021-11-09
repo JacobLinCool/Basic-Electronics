@@ -1,0 +1,36 @@
+{
+    "name": "basic-electronics",
+    "version": "0.1.0",
+    "description": "Basic Electronics",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "files": [
+        "lib"
+    ],
+    "scripts": {
+        "start": "ts-node -- ./src/",
+        "prepare": "npm run build && npm run doc",
+        "dev": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/",
+        "build": "npm run format && tsc",
+        "doc": "typedoc ./src/",
+        "format": "prettier --write \"src/**/*.ts\""
+    },
+    "keywords": [
+        "electronics",
+        "basic electronics",
+        "electronics calculator"
+    ],
+    "author": {
+        "name": "JacobLinCool",
+        "email": "jacoblincool@gmail.com"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^16.11.7",
+        "nodemon": "^2.0.14",
+        "prettier": "^2.4.1",
+        "ts-node": "^10.4.0",
+        "typedoc": "^0.22.8",
+        "typescript": "^4.4.4"
+    }
+}
